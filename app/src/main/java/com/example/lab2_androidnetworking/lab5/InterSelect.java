@@ -1,4 +1,4 @@
-package com.hnq40.myapplication.demo5;
+package com.example.lab2_androidnetworking.lab5;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

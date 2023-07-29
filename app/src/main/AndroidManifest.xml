@@ -19,7 +19,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".lab4.MainActivitylab4"
+            android:name=".lab6.MainActivity_lab6"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

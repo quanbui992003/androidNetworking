@@ -1,6 +1,4 @@
-package com.hnq40.myapplication.demo5;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.lab2_androidnetworking.lab5;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -8,8 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.hnq40.myapplication.R;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.lab2_androidnetworking.R;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,7 +30,7 @@ public class Demo51MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo51_main);
+        setContentView(R.layout.layout_lab5);
         txt1=findViewById(R.id.demo51Txt1);
         txt2=findViewById(R.id.demo51Txt2);
         txt3=findViewById(R.id.demo51Txt3);
@@ -37,6 +39,7 @@ public class Demo51MainActivity extends AppCompatActivity {
         btn2=findViewById(R.id.demo51Btn2);
         btn3=findViewById(R.id.demo51Btn3);
         tv1=findViewById(R.id.demo51TvKQ);
+
         btn1.setOnClickListener((view)->{
             selectRetrofit();
         });
@@ -106,11 +109,13 @@ public class Demo51MainActivity extends AppCompatActivity {
                 SvrResponseUpdate svrResponseUpdate=response.body();
                 //dua ket qua len man hinh
                 tv1.setText(svrResponseUpdate.getMessage());
+                Toast.makeText(Demo51MainActivity.this, "thanh cong", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<SvrResponseUpdate> call, Throwable t) {
                 tv1.setText(t.getMessage());//ghi ra loi
+                Toast.makeText(Demo51MainActivity.this, "k thnah cong", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -14,12 +14,11 @@
         android:theme="@style/Theme.Lab2_Androidnetworking"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".lab6.MainActivity_lab6"
+            android:name=".lab7.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
